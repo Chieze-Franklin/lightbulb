@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
+import reducer from './reducers';
+
 const Context = React.createContext();
 
-export const Provider = Context.Provider;
-
-export class Provider2 extends Component {
+export class Provider extends Component {
   state = {
     color: {
       alpha: '255',
@@ -14,7 +14,8 @@ export class Provider2 extends Component {
     },
     state: {
       on: false
-    }
+    },
+    dispatch: action => this.setState(state => reducer(state, action))
   }
   render() {
     return (
