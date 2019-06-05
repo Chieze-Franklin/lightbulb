@@ -1,11 +1,10 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLightbulb } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
-import { Row, Col } from 'react-materialize'
+import { Row, Col } from 'react-materialize';
 
 import './App.css';
-import Range from './components/Range'
-import Switch from './components/Switch'
+import LightBulb from './components/LightBulb';
+import Range from './components/Range';
+import Switch from './components/Switch';
 
 function App() {
   return (
@@ -27,7 +26,7 @@ function App() {
             </Row>
           </Col>
           <Col>
-            <FontAwesomeIcon icon={faLightbulb} size="10x" color="#ffffffff" />
+            <LightBulb />
           </Col>
         </Row>
         <Row>
