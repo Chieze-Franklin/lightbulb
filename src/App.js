@@ -7,21 +7,9 @@ import Range from './components/Range';
 import Switch from './components/Switch';
 import { Provider } from './context-api';
 
-const state = {
-  color: {
-    alpha: '50',
-    blue: '100',
-    green: '200',
-    red: '255'
-  },
-  state: {
-    on: !false
-  }
-}
-
 function App() {
   return (
-    <Provider value={state}>
+    <Provider>
       <div className="App">
         <header className="App-header">
           <Row>
