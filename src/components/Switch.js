@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
 import { Switch as MaterializeSwitch } from 'react-materialize'
 
 class Switch extends Component {
@@ -14,4 +14,13 @@ class Switch extends Component {
   }
 }
 
-export default Switch;
+const mapDispatchToProps = {
+  deleteTodo,
+  toggleTodo
+};
+
+const mapStateToProps = state => ({
+  todos: state.todos.items
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Switch);
