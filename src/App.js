@@ -5,35 +5,39 @@ import './App.css';
 import LightBulb from './components/LightBulb';
 import Range from './components/Range';
 import Switch from './components/Switch';
+import { Provider } from './context-api-redux';
+import store from './context-api-redux/store';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Row>
-          <Switch />
-        </Row>
-        <Row>
-          <Col>
-            <Row>
-             <Range name="red" />
-            </Row>
-            <Row>
-             <Range name="green" />
-            </Row>
-            <Row>
-             <Range name="blue" />
-            </Row>
-          </Col>
-          <Col>
-            <LightBulb />
-          </Col>
-        </Row>
-        <Row>
-          <Range name="alpha" />
-        </Row>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <header className="App-header">
+          <Row>
+            <Switch />
+          </Row>
+          <Row>
+            <Col>
+              <Row>
+              <Range name="red" />
+              </Row>
+              <Row>
+              <Range name="green" />
+              </Row>
+              <Row>
+              <Range name="blue" />
+              </Row>
+            </Col>
+            <Col>
+              <LightBulb />
+            </Col>
+          </Row>
+          <Row>
+            <Range name="alpha" />
+          </Row>
+        </header>
+      </div>
+    </Provider>
   );
 }
 
