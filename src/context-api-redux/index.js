@@ -68,6 +68,8 @@ function withConsumer(InnerComponent) {
                 } else if (typeof inner === 'object') {
                   dispatch(inner);
                 }
+                // the above if block is similar to what obtains in redux-thunk
+                // https://github.com/reduxjs/redux-thunk/blob/master/src/index.js
               }
             }
           }
